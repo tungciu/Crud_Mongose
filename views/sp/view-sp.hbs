@@ -1,0 +1,24 @@
+    <a href="/sp/" class="btn btn-primary"> Add sp</a>
+<h3>
+   DANH SACH SP
+</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>NAME</th>
+        <th>Gia</th>
+        <th>Soluong</th>
+        <th>ACTION</th>
+    </tr>
+
+    {{#each sp}}
+    <tr>
+        <td>{{this.Name}} </td>
+        <td>{{this.Gia}} </td>
+        <td>{{this.Soluong}}</td>
+        <td> <a href="/sp/editsp/{{this._id}}" class="btn btn-primary btn-sm"> edit</a>
+        <a href="/sp/deletesp/{{this._id}}" onclick="return confirm('ban co muon xoa k')" class="btn btn-danger btn-sm"> delete</a>
+             </td>
+    </tr>
+    {{/each}}
+</table>
